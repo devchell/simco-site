@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/*
+  Direção: catálogo técnico de balcão. Papel frio, tinta azul-marinho da marca,
+  âmbar de sinalização só nas ações. Títulos em Archivo expandido, códigos em mono.
+  Escala tipográfica 1.25 sobre base de 17px.
+*/
+@theme {
+  --font-display: var(--font-archivo), "Arial Narrow", Arial, sans-serif;
+  --font-sans: var(--font-plex), "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Consolas, monospace;
+
+  --color-paper: oklch(0.976 0.004 250);
+  --color-surface: oklch(1 0 0);
+  --color-sunken: oklch(0.951 0.007 250);
+  --color-ink: oklch(0.21 0.035 258);
+  --color-muted: oklch(0.45 0.025 258);
+  --color-line: oklch(0.89 0.01 250);
+  --color-line-strong: oklch(0.79 0.015 250);
+  --color-navy: oklch(0.36 0.105 256);
+  --color-navy-800: oklch(0.27 0.075 257);
+  --color-navy-deep: oklch(0.205 0.05 258);
+  --color-on-navy: oklch(0.96 0.01 250);
+  --color-on-navy-muted: oklch(0.78 0.03 252);
+  --color-signal: oklch(0.82 0.155 80);
+  --color-signal-hover: oklch(0.77 0.16 72);
+  --color-signal-ink: oklch(0.5 0.12 62);
+  --color-ok: oklch(0.47 0.12 152);
+  --color-ok-soft: oklch(0.95 0.04 152);
+  --color-error: oklch(0.53 0.19 28);
+  --color-error-soft: oklch(0.95 0.03 28);
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.328rem;
+  --text-xl: 1.66rem;
+  --text-2xl: 2.075rem;
+  --text-3xl: 2.594rem;
+  --text-4xl: 3.242rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-stretch: 118%;
+    line-height: 1.08;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: max(1.25rem, env(safe-area-inset-left, 0px));
+  }
+  .rotulo {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-base);
+    line-height: 1;
+    white-space: nowrap;
+    transition:
+      background-color 160ms var(--ease-out),
+      color 160ms var(--ease-out),
+      border-color 160ms var(--ease-out),
+      transform 120ms var(--ease-out);
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primario {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+  .btn-primario:hover {
+    background: var(--color-signal-hover);
+  }
+  .btn-secundario {
+    border: 1.5px solid var(--color-ink);
+    color: var(--color-ink);
+  }
+  .btn-secundario:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .btn-claro {
+    border: 1.5px solid var(--color-on-navy-muted);
+    color: var(--color-on-navy);
+  }
+  .btn-claro:hover {
+    background: var(--color-on-navy);
+    color: var(--color-navy-deep);
+  }
+  .link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .campo {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.625rem 0.875rem;
+    border: 1.5px solid var(--color-line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    font-size: 1rem;
+    transition: border-color 140ms var(--ease-out);
+  }
+  .campo:hover {
+    border-color: var(--color-muted);
+  }
+  .campo:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 0;
+    border-color: var(--color-navy);
+  }
+  .campo[aria-invalid="true"] {
+    border-color: var(--color-error);
+  }
+  .prosa {
+    max-width: 66ch;
+  }
+  .prosa > * + * {
+    margin-top: 1rem;
+  }
+  .prosa h2 {
+    font-size: var(--text-xl);
+    margin-top: 2.5rem;
+  }
+  .prosa h3 {
+    font-size: var(--text-lg);
+    margin-top: 2rem;
+  }
+  .prosa ol,
+  .prosa ul {
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .prosa ol {
+    list-style: decimal;
+  }
+  .prosa ul {
+    list-style: disc;
+  }
+  .prosa li::marker {
+    color: var(--color-signal-ink);
+    font-family: var(--font-mono);
+  }
+  .prosa a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prosa kbd,
+  .prosa code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--color-sunken);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-sm);
+    padding: 0.05em 0.35em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
