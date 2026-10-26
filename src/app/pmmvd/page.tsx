@@ -25,10 +25,9 @@ const acessos = [
 export default function PaginaPmmvd() {
   return (
     <>
-      <section className="border-b border-line pt-14 pb-12">
+      <section className="border-b border-line bg-sunken pb-14 pt-16">
         <div className="wrap">
-          <p className="rotulo text-signal-ink">Programa da CETESB</p>
-          <h1 className="mt-3 max-w-3xl text-[2.4rem] font-extrabold sm:text-[3rem]">
+          <h1 className="max-w-3xl text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">
             PMMVD: Programa para Melhoria da Manutenção de Veículos Diesel
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-ink/75">
@@ -55,13 +54,13 @@ export default function PaginaPmmvd() {
             </p>
           </div>
           <div>
-            <h2 className="rotulo text-signal-ink">Documentos e acessos</h2>
+            <h2 className="text-2xl font-extrabold">Documentos e acessos</h2>
             <ul className="mt-4 border-t-2 border-ink">
               {acessos.map((a) => (
                 <li key={a.href} className="border-b border-line">
                   <a href={a.href} className="group flex min-h-16 items-center justify-between gap-4 py-4">
                     <span>
-                      <span className="block font-display text-xl font-bold [font-stretch:118%] group-hover:text-navy">
+                      <span className="block font-display text-xl font-bold group-hover:text-navy">
                         {a.titulo}
                       </span>
                       <span className="block text-sm text-muted">{a.destino}</span>
@@ -78,7 +77,6 @@ export default function PaginaPmmvd() {
       <section aria-labelledby="titulo-oficinas" className="border-y border-line bg-surface py-16 md:py-24">
         <div className="wrap grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="rotulo text-signal-ink">Para oficinas</p>
             <h2 id="titulo-oficinas" className="mt-3 text-[2rem] font-bold sm:text-[2.5rem]">
               Sistema de gestão para a sua oficina
             </h2>

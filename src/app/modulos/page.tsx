@@ -14,10 +14,9 @@ const grupos = Object.keys(gruposModulos) as Modulo["grupo"][];
 export default function Modulos() {
   return (
     <>
-      <section className="border-b border-line pb-12 pt-14">
+      <section className="border-b border-line bg-sunken pb-14 pt-16">
         <div className="wrap">
-          <p className="rotulo text-signal-ink">Módulos</p>
-          <h1 className="mt-4 max-w-3xl text-[2.4rem] font-extrabold sm:text-[3rem]">
+          <h1 className="max-w-3xl text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">
             Tudo o que a SEFAZ e o banco pedem, dentro do mesmo sistema
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-ink/75">
@@ -58,7 +57,7 @@ export default function Modulos() {
                     className="grid scroll-mt-32 gap-x-10 gap-y-4 border-b border-line py-8 md:grid-cols-[13rem_minmax(0,1fr)_minmax(0,1fr)]"
                   >
                     <div>
-                      <h3 className="font-display text-2xl font-bold [font-stretch:118%]">{m.sigla}</h3>
+                      <h3 className="font-display text-2xl font-bold">{m.sigla}</h3>
                       {m.modelo && <p className="mt-1 font-mono text-xs text-muted">documento modelo {m.modelo}</p>}
                     </div>
                     <div>

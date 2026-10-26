@@ -43,44 +43,44 @@ export default async function PaginaSegmento({ params }: Props) {
 
   return (
     <>
-      <section className="border-b border-line">
-        <div className="wrap grid gap-12 pb-14 pt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:pb-20 lg:pt-16">
+      <section className="bg-brand-900 text-on-brand">
+        <div className="wrap grid gap-12 pb-16 pt-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-16 lg:pb-20 lg:pt-16">
           <div>
-            <nav aria-label="Você está em" className="text-sm text-muted">
-              <Link href="/solucoes" className="hover:text-ink hover:underline">
+            <nav aria-label="Você está em" className="text-sm text-on-brand-muted">
+              <Link href="/solucoes" className="hover:text-white hover:underline">
                 Soluções
               </Link>{" "}
-              / <span className="text-ink">{s.nome}</span>
+              / <span className="text-white">{s.nome}</span>
             </nav>
-            <h1 className="mt-5 text-[2.3rem] font-extrabold sm:text-[2.9rem]">{s.titulo}</h1>
-            <p className="mt-5 max-w-xl text-lg text-ink/75">{s.resumo}</p>
+            <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[1.04] tracking-[-0.035em] sm:text-[3.3rem]">{s.titulo}</h1>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-on-brand-muted sm:text-xl">{s.resumo}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#orcamento" className="btn btn-primario">
+              <Link href="#orcamento" className="btn btn-branco !min-h-14 !px-7">
                 Pedir demonstração
               </Link>
               <a
                 href={linkWhatsApp("vendas", `Olá! Tenho uma empresa de ${s.nome.toLowerCase()} e quero conhecer o sistema.`)}
-                className="btn btn-secundario"
+                className="btn btn-claro !min-h-14 !px-7"
               >
                 Falar com vendas
               </a>
             </div>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 text-ink">
             <Tela />
-            <p className="mt-3 text-right text-xs text-muted">Tela ilustrativa com dados de exemplo</p>
+            <p className="mt-3 text-right text-xs text-on-brand-muted">Tela ilustrativa com dados de exemplo</p>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="titulo-recursos" className="py-16 md:py-24">
+      <section aria-labelledby="titulo-recursos" className="bg-sunken py-16 md:py-24">
         <div className="wrap">
-          <h2 id="titulo-recursos" className="text-[2rem] font-bold sm:text-[2.4rem]">
+          <h2 id="titulo-recursos" className="text-[2.1rem] font-extrabold tracking-[-0.03em] sm:text-[2.75rem]">
             O que o sistema faz no dia a dia
           </h2>
           <div className="mt-10 grid gap-x-12 gap-y-12 lg:grid-cols-3">
             {s.blocos.map((b) => (
-              <div key={b.titulo} className="border-t-2 border-ink pt-5">
+              <div key={b.titulo} className="rounded-[18px] border border-line bg-white p-7">
                 <h3 className="text-xl font-bold">{b.titulo}</h3>
                 <ul className="mt-5 grid gap-3">
                   {b.itens.map((item) => (
@@ -94,7 +94,7 @@ export default async function PaginaSegmento({ params }: Props) {
             ))}
           </div>
           {s.observacao && (
-            <p className="mt-14 max-w-3xl border-l-4 border-signal bg-surface px-5 py-4 text-ink/85">{s.observacao}</p>
+            <p className="mt-10 max-w-4xl rounded-[14px] bg-sky-soft px-6 py-5 text-lg text-brand-900">{s.observacao}</p>
           )}
         </div>
       </section>

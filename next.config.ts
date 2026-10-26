@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/treinamentos", destination: "/suporte/videos", permanent: true },
       { source: "/blog", destination: "/", permanent: true },
+      { source: "/menu-simco", destination: "/", permanent: true },
       { source: "/solucoes-2", destination: "/modulos", permanent: true },
       { source: "/erp-comercial", destination: "/solucoes", permanent: true },
       { source: "/produtos/erp-simco/erp-para-autopecas", destination: "/solucoes/autopecas", permanent: true },

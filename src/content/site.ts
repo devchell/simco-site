@@ -33,7 +33,6 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://simco-site.v
 export const navegacao = [
   { href: "/solucoes", rotulo: "Soluções" },
   { href: "/modulos", rotulo: "Módulos fiscais" },
-  { href: "/menu-simco", rotulo: "Menu Simco" },
   { href: "/suporte", rotulo: "Suporte" },
   { href: "/empresa", rotulo: "Empresa" },
   { href: "/contato", rotulo: "Contato" },

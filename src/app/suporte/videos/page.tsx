@@ -64,7 +64,6 @@ export default function Videos() {
       <section aria-labelledby="titulo-treinamento" className="border-t border-line bg-navy-deep py-16 text-on-navy">
         <div className="wrap grid gap-8 md:grid-cols-[minmax(0,1.4fr)_auto] md:items-center">
           <div>
-            <p className="rotulo text-signal">Treinamento</p>
             <h2 id="titulo-treinamento" className="mt-3 text-[1.9rem] font-bold">
               Prefere aprender com alguém do lado?
             </h2>

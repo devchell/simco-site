@@ -19,8 +19,7 @@ export default function NaoEncontrada() {
   return (
     <section className="py-16 md:py-24">
       <div className="wrap">
-        <p className="rotulo text-signal-ink">Erro 404</p>
-        <h1 className="mt-3 text-[2.4rem] font-extrabold sm:text-[3rem]">Página não encontrada</h1>
+        <h1 className="text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">Página não encontrada</h1>
         <p className="mt-5 max-w-2xl text-lg text-ink/75">
           O endereço pode ter sido digitado errado ou a página mudou de lugar. Busque o que você precisa no suporte
           ou escolha uma das páginas abaixo.

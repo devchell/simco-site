@@ -34,10 +34,9 @@ const valores = [
 export default function PaginaEmpresa() {
   return (
     <>
-      <section className="border-b border-line pt-14 pb-12">
+      <section className="border-b border-line bg-sunken pb-14 pt-16">
         <div className="wrap">
-          <p className="rotulo text-signal-ink">Quem somos</p>
-          <h1 className="mt-3 max-w-3xl text-[2.4rem] font-extrabold sm:text-[3rem]">
+          <h1 className="max-w-3xl text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">
             Software de gestão feito em Vargem Grande Paulista desde {empresa.fundacao}
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-ink/75">
@@ -55,7 +54,6 @@ export default function PaginaEmpresa() {
       <section aria-labelledby="titulo-missao" className="py-16 md:py-24">
         <div className="wrap grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
           <div>
-            <p className="rotulo text-signal-ink">Missão</p>
             <h2 id="titulo-missao" className="mt-3 text-[2rem] font-bold sm:text-[2.5rem]">
               Software de gestão em que dá para confiar
             </h2>
@@ -65,18 +63,17 @@ export default function PaginaEmpresa() {
             </p>
           </div>
           <div>
-            <h3 className="rotulo text-signal-ink">Valores</h3>
-            <ol className="mt-4 border-t-2 border-ink">
-              {valores.map((v, i) => (
-                <li key={v.titulo} className="grid grid-cols-[3rem_minmax(0,1fr)] gap-x-4 border-b border-line py-5">
-                  <span className="font-mono text-sm text-muted">{String(i + 1).padStart(2, "0")}</span>
+            <h3 className="text-2xl font-extrabold">Valores</h3>
+            <ul className="mt-4 border-t-2 border-ink">
+              {valores.map((v) => (
+                <li key={v.titulo} className="border-b border-line py-5">
                   <div>
-                    <p className="font-display text-xl font-bold [font-stretch:118%]">{v.titulo}</p>
+                    <p className="font-display text-xl font-bold">{v.titulo}</p>
                     <p className="mt-1 text-ink/75">{v.texto}</p>
                   </div>
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
         </div>
       </section>
@@ -129,7 +126,6 @@ export default function PaginaEmpresa() {
       <section id="trabalhe-conosco" aria-labelledby="titulo-trabalhe" className="scroll-mt-28 py-16 md:py-24">
         <div className="wrap grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="rotulo text-signal-ink">Trabalhe conosco</p>
             <h2 id="titulo-trabalhe" className="mt-3 text-[2rem] font-bold sm:text-[2.5rem]">
               Faça parte do nosso time
             </h2>

@@ -47,8 +47,7 @@ export default function Suporte() {
       <section className="border-b border-line bg-surface pb-12 pt-12 md:pb-16 md:pt-14">
         <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-end">
           <div>
-            <p className="rotulo text-signal-ink">Central de suporte</p>
-            <h1 className="mt-4 text-[2.4rem] font-extrabold sm:text-[3rem]">Como podemos ajudar?</h1>
+            <h1 className="text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">Como podemos ajudar?</h1>
             <p className="mt-4 max-w-xl text-lg text-ink/75">
               Busque pelo problema, pela mensagem que apareceu na tela ou pelo código da rejeição.
             </p>
@@ -208,7 +207,6 @@ export default function Suporte() {
       <section id="chamado" aria-labelledby="titulo-chamado" className="scroll-mt-28 border-t border-line bg-sunken py-16 md:py-20">
         <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)]">
           <div>
-            <p className="rotulo text-signal-ink">Não achou a resposta?</p>
             <h2 id="titulo-chamado" className="mt-3 text-[1.9rem] font-bold sm:text-[2.2rem]">
               Abra um chamado
             </h2>

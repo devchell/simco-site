@@ -1,12 +1,11 @@
 import { Hero } from "@/components/home/Hero";
 import {
   DestaqueSuporte,
-  FaixaFatos,
-  FaixaMenuSimco,
-  FichaModulos,
+  FaixaConfianca,
   Implantacao,
-  ListaSegmentos,
-  Parceiros,
+  ParaOContador,
+  Recursos,
+  Segmentos,
 } from "@/components/home/Secoes";
 import { ChamadaOrcamento } from "@/components/ChamadaOrcamento";
 
@@ -14,13 +13,12 @@ export default function Inicio() {
   return (
     <>
       <Hero />
-      <FaixaFatos />
-      <ListaSegmentos />
-      <FichaModulos />
+      <FaixaConfianca />
+      <Recursos />
+      <Segmentos />
+      <ParaOContador />
       <Implantacao />
-      <FaixaMenuSimco />
       <DestaqueSuporte />
-      <Parceiros />
       <ChamadaOrcamento />
     </>
   );

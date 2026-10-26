@@ -7,7 +7,7 @@ Site da SIMCO Informática, empresa de sistemas de gestão (ERP) para autopeças
 - [Next.js](https://nextjs.org) (App Router, páginas estáticas)
 - TypeScript
 - Tailwind CSS 4
-- Motion (animação da troca de segmento na página inicial)
+- Motion (respeita a preferência de movimento reduzido no banner)
 - MiniSearch (busca da central de suporte, feita no navegador)
 
 ## Rodando localmente
@@ -57,3 +57,15 @@ Os formulários não enviam dados a um servidor: eles montam a mensagem e abrem 
 ## Publicação
 
 O projeto é publicado na Vercel. Cada push na branch `main` gera um novo deploy.
+
+## Créditos das imagens
+
+Fotos do banner da página inicial, baixadas do Unsplash em 26/10/2026 e usadas sob a [Licença Unsplash](https://unsplash.com/license):
+
+| Arquivo | Autor | Origem |
+| --- | --- | --- |
+| `public/img/hero/gestao.jpg` | Studio Republic (@studiorepublic) | https://unsplash.com/photos/fotKKqWNMQ4 |
+| `public/img/hero/automacao.jpg` | Simon Kadula (@simonkadula) | https://unsplash.com/photos/-gkndM1GvSA |
+| `public/img/hero/oficina.jpg` | @mtonuk | https://unsplash.com/photos/8t6tk7LYLrE |
+
+Logo da SIMCO e logos dos parceiros (Sweda, TecnoSpeed, JN2): material da própria SIMCO, extraído do site oficial.

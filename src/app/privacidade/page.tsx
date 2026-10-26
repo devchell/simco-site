@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function PaginaPrivacidade() {
   return (
     <>
-      <section className="border-b border-line pt-14 pb-12">
+      <section className="border-b border-line bg-sunken pb-14 pt-16">
         <div className="wrap">
-          <p className="rotulo text-signal-ink">Atualizada em 26 de outubro de 2026</p>
-          <h1 className="mt-3 text-[2.4rem] font-extrabold sm:text-[3rem]">Política de privacidade</h1>
+          <h1 className="text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">Política de privacidade</h1>
+          <p className="mt-3 text-sm font-medium text-muted">Atualizada em 26 de outubro de 2026</p>
           <p className="mt-5 max-w-2xl text-lg text-ink/75">
             Explicamos aqui, em linguagem simples, quais dados este site trata e quais são os seus direitos, de acordo
             com a Lei Geral de Proteção de Dados (Lei 13.709/2018).

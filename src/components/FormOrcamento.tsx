@@ -10,7 +10,6 @@ const tiposNegocio = [
   "Oficina mecânica",
   "Comércio",
   "Controle de cilindros ou equipamentos",
-  "Restaurante ou lanchonete (Menu Simco)",
   "Outro",
 ];
 

@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solucoes",
     ...segmentos.map((s) => `/solucoes/${s.slug}`),
     "/modulos",
-    "/menu-simco",
     "/pmmvd",
     "/empresa",
     "/contato",

@@ -164,7 +164,7 @@ export function TelaComercio() {
       </ul>
       <div className="mt-3 flex items-baseline justify-between border-t-2 border-ink pt-3">
         <span className="font-semibold">Total</span>
-        <span className="font-display text-2xl font-bold tabular-nums [font-stretch:110%]">{moeda(total)}</span>
+        <span className="font-display text-2xl font-bold tabular-nums">{moeda(total)}</span>
       </div>
       <div className="mt-4 rounded-sm border border-ok/30 bg-ok-soft p-3">
         <div className="flex items-center justify-between gap-2">
@@ -208,45 +208,5 @@ export function TelaCilindros() {
       </ul>
       <p className="mt-4 text-xs text-muted">Locação de agosto: 38 equipamentos faturados, cobrança enviada a 21 clientes.</p>
     </Janela>
-  );
-}
-
-export function TelaRestaurante() {
-  const pratos = [
-    { nome: "Prato feito do dia", preco: 32.0 },
-    { nome: "Parmegiana com fritas", preco: 48.0 },
-    { nome: "Suco natural 500 ml", preco: 12.0 },
-  ];
-  return (
-    <div className="grid items-end gap-5 sm:grid-cols-[minmax(0,15rem)_1fr]">
-      <div className="mx-auto w-full max-w-[15rem] rounded-[1.6rem] border-[6px] border-navy-deep bg-surface p-3 shadow-[0_24px_48px_-28px_oklch(0.2_0.05_258/0.45)]">
-        <div className="rounded-[1rem] bg-paper p-3">
-          <p className="font-display text-base font-bold [font-stretch:110%]">Cantina da Praça</p>
-          <p className="text-[0.7rem] text-muted">Cardápio digital · aberto agora</p>
-          <ul className="mt-3 grid gap-2">
-            {pratos.map((p, i) => (
-              <li key={p.nome} className="flex items-center justify-between gap-2 rounded-sm bg-surface px-2.5 py-2 text-[0.78rem]">
-                <span>{p.nome}</span>
-                <span className={`grid size-6 place-items-center rounded-sm text-xs font-bold ${i === 1 ? "bg-signal" : "bg-sunken"}`}>
-                  {i === 1 ? "1" : "+"}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-3 rounded-sm bg-[#1f8f4e] py-2 text-center text-[0.78rem] font-semibold text-white">
-            Enviar pedido pelo WhatsApp
-          </p>
-        </div>
-      </div>
-      <div className="rounded-md border border-line bg-surface p-4 text-sm">
-        <p className="rotulo text-[0.68rem] text-muted">Gestor de pedidos</p>
-        <p className="mt-1 font-semibold">Pedido #0391 · Mesa 7</p>
-        <p className="text-muted">1× Parmegiana com fritas</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <Selo tom="ok">Comanda impressa</Selo>
-          <Selo>Sem comissão por venda</Selo>
-        </div>
-      </div>
-    </div>
   );
 }

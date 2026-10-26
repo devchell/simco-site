@@ -9,7 +9,6 @@ const colunas = [
     titulo: "Soluções",
     links: [
       ...segmentos.map((s) => ({ href: `/solucoes/${s.slug}`, rotulo: s.nome })),
-      { href: "/menu-simco", rotulo: "Menu Simco" },
       { href: "/pmmvd", rotulo: "PMMVD" },
     ],
   },
@@ -36,10 +35,10 @@ const colunas = [
 
 export function Rodape() {
   return (
-    <footer className="bg-navy-deep text-on-navy-muted pb-[env(safe-area-inset-bottom,0px)]">
+    <footer className="bg-brand-950 text-on-navy-muted pb-[env(safe-area-inset-bottom,0px)]">
       <div className="wrap grid gap-12 py-16 md:grid-cols-[1.3fr_repeat(3,1fr)]">
         <div className="grid content-start gap-5">
-          <p className="font-display text-2xl font-bold text-on-navy [font-stretch:118%]">SIMCO Informática</p>
+          <p className="font-display text-2xl font-bold text-on-navy">SIMCO Informática</p>
           <p className="max-w-xs">Sistemas de gestão para pequenas empresas, desde {empresa.fundacao}.</p>
           <dl className="grid gap-3 text-sm">
             <div>
@@ -93,7 +92,7 @@ export function Rodape() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="wrap flex flex-col gap-4 py-6 text-sm md:flex-row md:items-center md:justify-between">
+        <div className="wrap flex flex-col gap-4 py-6 pb-24 text-sm md:flex-row md:items-center md:justify-between md:pb-6 md:pr-24">
           <p>
             {empresa.razaoSocial} · CNPJ {empresa.cnpj}
             <br />

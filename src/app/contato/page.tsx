@@ -15,10 +15,9 @@ export const metadata: Metadata = {
 export default function PaginaContato() {
   return (
     <>
-      <section className="border-b border-line pt-14 pb-12">
+      <section className="border-b border-line bg-sunken pb-14 pt-16">
         <div className="wrap">
-          <p className="rotulo text-signal-ink">Contato</p>
-          <h1 className="mt-3 text-[2.4rem] font-extrabold sm:text-[3rem]">Fale com a SIMCO</h1>
+          <h1 className="text-[2.5rem] font-extrabold tracking-[-0.035em] sm:text-[3.4rem]">Fale com a SIMCO</h1>
           <p className="mt-5 max-w-2xl text-lg text-ink/75">
             Escolha o canal conforme o assunto: vendas para conhecer o sistema, suporte para quem já é cliente.
           </p>
@@ -32,7 +31,6 @@ export default function PaginaContato() {
           </h2>
           <div className="grid gap-10 md:grid-cols-3">
             <div className="border-t-2 border-ink pt-5">
-              <p className="rotulo text-signal-ink">Vendas</p>
               <h3 className="mt-2 text-2xl font-bold">Quero conhecer o sistema</h3>
               <div className="mt-5 grid gap-3">
                 <a
@@ -51,7 +49,6 @@ export default function PaginaContato() {
               </div>
             </div>
             <div className="border-t-2 border-ink pt-5">
-              <p className="rotulo text-signal-ink">Suporte para clientes</p>
               <h3 className="mt-2 text-2xl font-bold">Já uso o sistema</h3>
               <div className="mt-5 grid gap-3">
                 <a
@@ -70,7 +67,6 @@ export default function PaginaContato() {
               </div>
             </div>
             <div className="border-t-2 border-ink pt-5">
-              <p className="rotulo text-signal-ink">E-mail</p>
               <h3 className="mt-2 text-2xl font-bold">Prefiro escrever</h3>
               <div className="mt-5 grid gap-3">
                 <a
@@ -89,7 +85,6 @@ export default function PaginaContato() {
       <section aria-labelledby="titulo-onde" className="border-y border-line bg-surface py-16 md:py-24">
         <div className="wrap grid gap-10 md:grid-cols-2">
           <div>
-            <p className="rotulo text-signal-ink">Onde estamos</p>
             <h2 id="titulo-onde" className="mt-3 text-[2rem] font-bold sm:text-[2.5rem]">
               Endereço
             </h2>
@@ -100,7 +95,6 @@ export default function PaginaContato() {
             </a>
           </div>
           <div>
-            <p className="rotulo text-signal-ink">Horário</p>
             <h2 className="mt-3 text-[2rem] font-bold sm:text-[2.5rem]">Atendimento</h2>
             <p className="mt-4 text-lg text-ink/75">{empresa.horario}</p>
           </div>
