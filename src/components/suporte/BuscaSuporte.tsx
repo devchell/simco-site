@@ -47,7 +47,7 @@ export function BuscaSuporte() {
           placeholder="Descreva o problema ou digite o código da rejeição"
           autoComplete="off"
           aria-controls={idLista}
-          className="h-16 w-full rounded-md border-2 border-ink bg-surface pl-14 pr-4 text-lg shadow-[4px_4px_0_0_var(--color-signal)] placeholder:text-muted focus-visible:outline-none focus-visible:shadow-[4px_4px_0_0_var(--color-navy)]"
+          className="h-16 w-full rounded-md border-2 border-line-strong bg-surface pl-14 pr-4 text-lg shadow-[var(--shadow-cartao)] placeholder:text-muted focus-visible:outline-none focus-visible:border-action focus-visible:shadow-[0_0_0_4px_rgb(11_103_201/0.2)]"
         />
       </form>
 
